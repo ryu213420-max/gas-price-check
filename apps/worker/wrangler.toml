@@ -1,0 +1,25 @@
+name = "gas-price-check"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# 価格は毎日変わるため、定期的に取り直す (06:15 JST = 21:15 UTC)
+[triggers]
+crons = ["15 21 * * *"]
+
+# ↓ database_id は `wrangler d1 create gas-price-check` で発行されたものに差し替える
+[[d1_databases]]
+binding = "DB"
+database_name = "gas-price-check"
+database_id = "00000000-0000-0000-0000-000000000000"
+
+# ↓ id は `wrangler kv namespace create CACHE` で発行されたものに差し替える
+[[kv_namespaces]]
+binding = "CACHE"
+id = "00000000000000000000000000000000"
+
+[ai]
+binding = "AI"
+
+# シークレットは wrangler secret put で設定する（このファイルには書かない）:
+#   GOOGLE_CLIENT_ID / GOOGLE_CLIENT_SECRET / SESSION_SECRET
