@@ -11,7 +11,7 @@ crons = ["15 21 * * *"]
 [[d1_databases]]
 binding = "DB"
 database_name = "gas-price-check"
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "ded200b4-b5dd-46b4-9ef4-726236c07b82"
 
 # ↓ id は `wrangler kv namespace create CACHE` で発行されたものに差し替える
 [[kv_namespaces]]
