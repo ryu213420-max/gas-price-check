@@ -16,7 +16,7 @@ database_id = "ded200b4-b5dd-46b4-9ef4-726236c07b82"
 # ↓ id は `wrangler kv namespace create CACHE` で発行されたものに差し替える
 [[kv_namespaces]]
 binding = "CACHE"
-id = "00000000000000000000000000000000"
+id = "104c1364b7224e1c9b7c221f59eee5c4"
 
 [ai]
 binding = "AI"
